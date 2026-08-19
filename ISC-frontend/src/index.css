@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+/*   --font-display: "Source Serif 4", Georgia, serif;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace; */
+
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-sans: "Work Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+
+  /* Ink — used for text/accents, never as a full-page dark background */
+  --color-navy-950: #16233f;
+  --color-navy-900: #1f3157;
+  --color-navy-800: #2c4373;
+  --color-navy-700: #3a5490;
+  --color-navy-100: #eef1f8;
+
+  /* Duty-stamp amber */
+  --color-amber-700: #96591a;
+  --color-amber-600: #b5701f;
+  --color-amber-500: #c97a2b;
+  --color-amber-100: #f4e3c8;
+
+  /* Paper */
+  --color-paper: #faf6ec;
+  --color-paper-line: #e3d8bd;
+  --color-paper-card: #fffdf7;
+
+  --color-ink: #23241f;
+  --color-ink-soft: #5c5a4e;
+
+  --color-seal-green: #2f6f4e;
+  --color-seal-green-bg: #e4efe6;
+  --color-seal-red: #a8382c;
+  --color-seal-red-bg: #f6e6e3;
+  --color-seal-amber-bg: #f4e3c8;
+}
+
+body {
+  background: var(--color-navy-100);
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* perforated-ledger divider, used between document sections */
+.ledger-rule {
+  border-top: 1px dashed var(--color-paper-line);
+}
+
+/* subtle paper grain for document surfaces */
+.paper-surface {
+  background-color: var(--color-paper);
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(35,36,31,0.035) 1px, transparent 0);
+  background-size: 14px 14px;
+}
+
+/* light sea-blue scrim over photos — text sits left */
+.photo-scrim-left {
+  background: linear-gradient(
+    90deg,
+    rgba(222, 237, 242, 0.96) 0%,
+    rgba(222, 237, 242, 0.88) 35%,
+    rgba(222, 237, 242, 0.35) 65%,
+    rgba(222, 237, 242, 0.05) 100%
+  );
+}
+
+/* light sea-blue scrim over photos — text sits centered.
+   Layer 1 (radial): extra legibility boost right behind the text.
+   Layer 2 (flat): even, uniform tint across the whole photo so
+   one side doesn't stay vivid while the other washes out. */
+.photo-scrim-center {
+  background:
+    radial-gradient(
+      ellipse 70% 95% at 50% 50%,
+      rgba(214, 233, 239, 0.94) 0%,
+      rgba(214, 233, 239, 0.86) 45%,
+      rgba(214, 233, 239, 0.55) 100%
+    ),
+    linear-gradient(
+      rgba(200, 224, 233, 0.62),
+      rgba(200, 224, 233, 0.62)
+    );
+}
+
+@media print {
+  @page {
+    margin: 12mm;
+  }
+  body {
+    background: white;
+  }
+}

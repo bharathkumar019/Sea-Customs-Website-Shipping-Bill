@@ -1,0 +1,179 @@
+{
+  "info": {
+    "_postman_id": "016da9ec-d566-43bb-869a-859a78a1ec62",
+    "name": "Batch16",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "20583363"
+  },
+  "item": [
+    {
+      "name": "http://127.0.0.1:8000/app/student/details/",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"student_name\": \"Azar\",\r\n        \"depart_name\": \"CSE\",\r\n        \"address\": \"Thanjai\",\r\n        \"course\": \"Python\",\r\n        \"fees_paid\": \"999.00\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/app/student/details/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "app",
+            "student",
+            "details",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update student",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"student_name\": \"Nagaraj\",\r\n        \"depart_name\": \"EEE\",\r\n        \"address\": \"Chennai\",\r\n        \"course\": \"Python\",\r\n        \"fees_paid\": 999.00\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/app/student/detail/21/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "app",
+            "student",
+            "detail",
+            "21",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/app/student/details/ Copy",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/app/student/details/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "app",
+            "student",
+            "details",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Patch",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"student_name\": \"Pranesh\",\r\n        \"depart_name\": \"EEE\",\r\n        \"address\": \"Chennai\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/app/student/detail/21/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "app",
+            "student",
+            "detail",
+            "21",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete Student",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"student_name\": \"Pranesh\",\r\n        \"depart_name\": \"EEE\",\r\n        \"address\": \"Chennai\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}{student/detail/20/",
+          "host": [
+            "{{base_url}}{student"
+          ],
+          "path": [
+            "detail",
+            "20",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
